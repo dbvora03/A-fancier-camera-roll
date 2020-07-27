@@ -1,0 +1,131 @@
+/* Required for full background image */
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+header,
+.view {
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.navbar-brand {
+  font-size: 22px;
+}
+
+.top-nav-collapse {
+  margin-top: 10px;
+  background-color: #78909c !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 3px solid whitesmoke;
+  width: 80px;
+}
+
+.twobuttons {
+  text-align: center;
+}
+
+.white-write {
+  font: white;
+  color: white;
+  display: inline-block;
+  border: 2px solid white;
+  border-inline: 60px;
+  padding: 5px 5px 5px 5px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#leftobject {
+  margin-right: 7px;
+}
+
+.dhruv-title {
+  margin-top: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  background-color: whitesmoke;
+}
+.gallery .pics {
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
+
+@media (max-width: 450px) {
+  .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn.filter {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+}
+
+.gallery {
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 15px solid whitesmoke;
+}
+
+#cart-icon {
+  width: 40px;
+  height: 40px;
+  filter: opacity(50%);
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.pics:hover {
+  opacity: 0.5;
+  transition: opacity 0.25s ease-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
