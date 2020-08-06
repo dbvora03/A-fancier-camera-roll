@@ -5,6 +5,12 @@ from django.db import models
 
 class Project(models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField()
-    technology = models.CharField(max_length=20)
-    image = models.FilePathField(path="projects/static/img/")
+    eightByTenPrice = models.CharField(max_length=4)
+    eightByTenPrice = models.CharField(max_length=4)
+
+    image =  models.CharField(max_length=100)
+
+
+
+
+# models.FilePathField(path="/img")

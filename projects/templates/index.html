@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+
+
+
+{% load static %}
+
+{% block page_content %}
+
+
+<!doctype html>
+<html lang="en" class="w3-animate-opacity">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- My styles-->
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans JP' rel='stylesheet'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>cleaner camera roll</title>
+  </head>
+  <body>
+  
+    <!-- Main navigation -->
+<header>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <div class="container" style=" margin-top: 30px;">
+      <a class="navbar-brand" href="#"><strong></strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+        aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation" style="color: black">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-7" >
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" style="background-color: transparent;">
+            <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+  <!-- Full Page Intro -->
+  <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; height: 100%;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+      <!-- Content -->
+      <div class="container">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-12 mb-4 white-text text-center" style="margin-top: 17em;">
+            <h3 class="dhruv-title display-4 fadeIn"data-wow-delay="0.3s">dhruv vora</h3>
+            <h1 class="dhruv-title fadeIn"data-wow-delay="0.3s">a fancier camera roll</h1>
+            <div class="twobuttons">
+              <p class="white-write" id="leftobject" onclick="topFunction()">portfolio</p>
+              <p class="white-write" onclick="topFunction2()">about me</p>
+            </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+</header>
+<!-- Main navigation -->
+
+<main>
+  <div class="container" id="about">
+    <!--Grid row-->
+    <div class="row py-5">
+      <!--Grid column-->
+      <div class="col-md-12 text-center">
+        <h4 style="color: #595959;">about</h4>
+        <p style="color: #595959;">17</p>
+        <p style="color: #595959;">calgary, ab</p>
+        <p style="color: #595959;">eos 6d </p>
+        <p style="color: #595959;"><a href="https://www.instagram.com/voruhh/">@voruhh</a></p>
+
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+</main>
+<!--Main Layout-->
+
+
+<!-- Grid row -->
+
+<div class="gallery" id="gallery">
+{% for project in projects %}
+
+  <!-- Grid column -->
+  <div class="mb-3 pics all  2">
+    <img class="img-fluid" src = '{{project.image}}' alt="{{ project.title }}">
+    <h4 class="img-title" style="color: #595959;">{{project.title}}</h4>
+  </div>
+
+{% endfor %}
+
+    <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+
+
+<!-- Footer -->
+<footer class="page-footer font-small indigo">
+
+  <!-- Footer Links -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-lowercase font-weight-bold">
+          <a href="#!">home</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-lowercase font-weight-bold">
+          <a href="#!" onclick='topFunction2()'>about</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-lowercase font-weight-bold">
+          <a href="#!" onclick='topFunction()'>photos</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-lowercase font-weight-bold">
+          <a href="mailto: dbvora03@gmail.com">email</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-lowercase font-weight-bold">
+          <a href="https://www.instagram.com/voruhh/">instagram</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+    <hr class="rgba-white-light" style="margin: 0 15%;">
+
+    <!-- Grid row-->
+    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+      <!-- Grid column -->
+      <div class="col-md-8 col-12 mt-5">
+        <p style="line-height: 1.7rem">coded with django and bootstrap :)</p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
+    <!-- Grid row-->
+    <div class="row pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-12">
+
+        <div class="mb-5 flex-center">
+
+
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Links -->
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+    <script>
+      function topFunction() {
+        document.getElementById("gallery").scrollIntoView();
+      }
+
+      function topFunction2() {
+        document.getElementById("about").scrollIntoView();
+      }
+
+      $(function() {
+        var selectedClass = "";
+        $(".filter").click(function(){
+          selectedClass = $(this).attr("data-rel");
+          $("#gallery").fadeTo(100, 0.1);
+          $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+          setTimeout(function() {
+            $("."+selectedClass).fadeIn().addClass('animation');
+          $("#gallery").fadeTo(300, 1);
+          }, 300);
+        });
+      });
+    </script>
+
+  
+  </body>
+</html>
+
+{% endblock %}
