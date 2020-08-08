@@ -11,6 +11,11 @@ header,
   background-color: whitesmoke;
 }
 
+leftobject:hover {
+  transform: scale(1.5);
+}
+
+
 @media (max-width: 740px) {
   html,
   body,
@@ -129,3 +134,4 @@ h5 {
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
 }
+

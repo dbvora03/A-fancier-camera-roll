@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from projects.models import Project
+from django.views.generic import ListView, DetailView
 
 # Create your views here.
 def projects(request):
@@ -10,7 +11,14 @@ def projects(request):
     return render(request, 'index.html', context)
 
 
-def project_detail(request, pk):
-    project = Project.objects.get(pk=pk)
-    context = {"project": project}
-    return render(request, "project_detail.html", context)
+class HomeView(ListView):
+    model = projects
+    template_name = "index.html"
+
+def checkout(request):
+    return render(request, "checkout-page.html")
+
+
+class ItemDetailView(DetailView):
+    model = Project
+    template_name = "detail.html"

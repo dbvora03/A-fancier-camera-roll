@@ -1,11 +1,251 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="static/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="static/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="static/css/style.min.css" rel="stylesheet">
+  <link href="static/css/css/styles.css" rel="stylesheet">
+  <link href="static/css/test.scss" rel="stylesheet">
+
 </head>
-<body>
-    <h1>Pls work</h1>
+
+<body >
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color:white;">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand waves-effect" href="/" target="_blank">
+        <h4 style="margin-bottom: 0;">dhruv vora</h4>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link waves-effect">
+              <span class="badge red z-depth-1 mr-1"> 0 </span>
+              <i class="fas fa-shopping-cart"></i>
+              <span class="clearfix d-none d-sm-inline-block"> Cart </span>
+            </a>
+          </li>
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+
+  <!--Main layout-->
+  <main class="mt-5 pt-4">
+    <div class="row">
+        <div class="container">
+        <p class="display-4" style="margin-top: 35px;">Anwar</p>
+            <div class="container">
+                <div class="row">    
+                    <img class="img-fluid" src="static/img/photos/bgoat.jpg" alt="{% static project.title %}" style=" width: 15vv ; height: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center wow fadeIn" style="padding-bottom: 25px;">
+
+        <!--Grid column-->
+        <div class="col-md-6 text-center">
+          <h4 class="my-4 h4">sulfur mountain, alberta</h4>
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="container">
+
+        <div class="row">
+        
+            <div class="col-md-3">
+                <div class="container">
+                    <section class="light">
+                        <h6>5 x 7 Print </h6>
+                        <h6><strong>$15</strong></h6>
+                        <div class="md-form">
+                            <input max="99" onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="text" id="materialFormCardNameEx" class="form-control" placeholder="Enter quantity">
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="container">
+                    <section class="light">
+                        <h6>8 x 10 Print </h6>
+                        <h6><strong>$2 {{ object.title }}</strong></h6>
+                        <div class="md-form">
+                            <input max="99" onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="text" min="0" id="materialFormCardNameEx" class="form-control" placeholder="Enter quantity">
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="container">
+                    <section class="light">
+                        <h6>11 x 14 Print </h6>
+                        <h6><strong>$35</strong></h6>
+                        <div class="md-form">
+                            <input max="99" onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="text" min="0" id="materialFormCardNameEx" class="form-control" placeholder="Enter quantity">
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="container">
+                    <section class="light">
+                        <h6>16 x 24 Print </h6>
+                        <h6><strong>$65</strong></h6>
+                        <div class="md-form">
+                            <input max="99" onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="text" min="0" id="materialFormCardNameEx" class="form-control" placeholder="Enter quantity">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!--Grid row-->
+
+        <div class="row justify-content-center"style="margin-bottom: 35px;">
+                <button type="button" id="checkout" class="btn btn-outline-dark" style="width: 25vw;">View Cart</button>
+        </div>
+        
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!-- Footer -->
+<footer class="page-footer font-small white">
+
+    <!-- Footer Links -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-lowercase font-weight-bold">
+            <a href="#!" style="color: black;">home</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-lowercase font-weight-bold">
+            <a href="#!" onclick='topFunction2()' style="color: black;">about</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-lowercase font-weight-bold">
+            <a href="#!" onclick='topFunction()' style="color: black;">photos</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-lowercase font-weight-bold">
+            <a href="mailto: dbvora03@gmail.com" style="color: black;"> email</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-lowercase font-weight-bold">
+            <a href="https://www.instagram.com/voruhh/" style="color: black;">instagram</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+      <hr class="rgba-white-light" style="margin: 0 15%;">
+  
+      <!-- Grid row-->
+      <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+  
+        <!-- Grid column -->
+        <div class="col-md-8 col-12 mt-5">
+          <p style="line-height: 1.7rem" style="color: black;">coded with django and bootstrap :)</p>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+      <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+  
+      <!-- Grid row-->
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Links -->
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="static/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="statc/js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+    $(document).ready(function() {
+        $("#checkout").hover(function() {
+            $("#checkout").animate({
+                height: "+=5px",
+                weight: "+=5px"
+            })
+        });
+    });
+
+  </script>
 </body>
+
 </html>
