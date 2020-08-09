@@ -4,6 +4,6 @@ from .views import HomeView, checkout, ItemDetailView
 
 urlpatterns = [
     path('', views.projects, name='hello_world'),
-    path('checkout/', checkout, name='checkout'),
-    path('products/<slug>/', ItemDetailView, name="product")
+    path('checkout/', views.checkout, name='checkout'),
+    path('products/<slug>/', views.ItemDetailView, name="product")
 ]
