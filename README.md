@@ -10,3 +10,5 @@ then run:
 python manage.py runserver
 
 * Make sure you are on the main directory *
+
+
