@@ -65,10 +65,10 @@
   <main class="mt-5 pt-4">
     <div class="row">
         <div class="container">
-        <p class="display-4" style="margin-top: 35px;">Anwar</p>
+        <p class="display-4" style="margin-top: 35px;">{{ object.title }}</p>
             <div class="container">
                 <div class="row">    
-                    <img class="img-fluid" src="./projects/static/img/photos/bgoat.jpg" alt="{% static project.title %}" style=" width: 15vv ; height: auto;">
+                    <img class="img-fluid" src="{{ object.image }}" alt="{% static project.title %}" style=" width: 15vv ; height: auto;">
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
 
         <!--Grid column-->
         <div class="col-md-6 text-center">
-          <h4 class="my-4 h4">sulfur mountain, alberta</h4>
+          <h4 class="my-4 h4"> {{ object.location }}</h4>
         </div>
         <!--Grid column-->
 

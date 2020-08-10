@@ -6,9 +6,11 @@ from django.shortcuts import reverse
 
 class Project(models.Model):
     title = models.CharField(max_length=100)
-    image =  models.CharField(max_length=100)
+    image = models.CharField(max_length=100)
     price = models.FloatField()
+    location = models.CharField(max_length=100)
     slug = models.SlugField()
+    
     def __str__(self):
         return self.title
 
