@@ -11,7 +11,11 @@ class HomeView(ListView):
 
 def checkout(request):
     return render(request, "checkout-page.html")
-
-class ItemDetailView(DetailView):
+""" 
+class detail(DetailView):
     model = Project
-    template_name = "product.html"
+    template_name = "product.html" """
+
+def detail(request):
+    broject = Project.objects.get(pk=postid)
+    return render(request, "product.html", {'Project': broject})

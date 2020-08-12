@@ -101,8 +101,8 @@
 
   <!-- Grid column -->
   <div class="mb-3 pics all  2">
-    <a href="{{ item.get_absolute_url }}"><img class="img-fluid" src = '{{project.image}}' alt="{{ project.title }}"></a>
-    <h4 class="img-title" style="color: #595959;">{{project.title}}</h4>
+    <a href="/{{ project.postid }}/"><img class="img-fluid" src = '{{ project.image }}' alt="{{ Project.title }}"></a>
+    <h4 class="img-title" style="color: #595959;"></h4>
   </div>
 
 {% endfor %}

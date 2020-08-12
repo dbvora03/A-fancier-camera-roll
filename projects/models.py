@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.db import models
 from django.shortcuts import reverse
+
+
 # Create your models here.
 
 
@@ -9,14 +11,10 @@ class Project(models.Model):
     image = models.CharField(max_length=100)
     price = models.FloatField()
     location = models.CharField(max_length=100)
-    slug = models.SlugField()
+    postid = models.IntegerField()
     
     def __str__(self):
         return self.title
-
-    def get_absolute_url(self):
-        return reverse("projects:product", kwargs= { 'slug': self.slug})
-
 
 class OrderItem(models.Model):
     item = models.ForeignKey(Project, on_delete=models.CASCADE)
