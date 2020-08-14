@@ -16,6 +16,9 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
+    def __str__(self):
+        return self.postid
+
 class OrderItem(models.Model):
     item = models.ForeignKey(Project, on_delete=models.CASCADE)
 
