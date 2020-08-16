@@ -11,13 +11,11 @@ class Project(models.Model):
     image = models.CharField(max_length=100)
     price = models.FloatField()
     location = models.CharField(max_length=100)
-    postid = models.IntegerField()
+    postid = models.IntegerField(primary_key=True)
     
     def __str__(self):
         return self.title
 
-    def __str__(self):
-        return self.postid
 
 class OrderItem(models.Model):
     item = models.ForeignKey(Project, on_delete=models.CASCADE)
