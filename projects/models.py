@@ -9,9 +9,10 @@ from django.shortcuts import reverse
 class Project(models.Model):
     title = models.CharField(max_length=100)
     image = models.CharField(max_length=100)
-    price = models.FloatField()
     location = models.CharField(max_length=100)
     postid = models.IntegerField(primary_key=True)
+    price = models.FloatField(max_length=4)
+    price2 = models.FloatField(max_length=4)
     
     def __str__(self):
         return self.title
