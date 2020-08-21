@@ -6,7 +6,7 @@ Current progress on my site can be seen at:
 
 https://radiant-chamber-14749.herokuapp.com/
 
-> If it takes forever to load, that's normal. Heroku do be like that ;(
+> The sit will take a while to load. Heroku do be like that ;(
 
 
 
@@ -40,16 +40,6 @@ Next, run this command:
 ```
 python manage.py runserver
 ```
-
-### Background
-
-I'm made this site as an opportunity to kill two birds with one stone: to put out an EComm site and hopefully gain some passive income, and to get my feet wet in web development. Knowing very little before I started, I managed to understand how to implement various libraries, languages, and frameworks such as:
-
-* Html/CSS/JS
-* JQuery
-* Bootstrap
-* Django
-* and many more
 
 
 

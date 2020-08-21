@@ -2,7 +2,6 @@ from django.conf import settings
 from django.db import models
 from django.shortcuts import reverse
 
-
 # Create your models here.
 
 
@@ -10,9 +9,14 @@ class Project(models.Model):
     title = models.CharField(max_length=100)
     image = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
-    postid = models.IntegerField(primary_key=True)
     price = models.FloatField(max_length=4)
-    price2 = models.FloatField(max_length=4)
+
+    #This line below seems to cause all the problems, regardless of what the foreignkey error is
+    #pricetwo = models.FloatField(max_length=4)
+    
+    
+    
+    postid = models.IntegerField(primary_key=True)
     
     def __str__(self):
         return self.title
@@ -22,7 +26,7 @@ class OrderItem(models.Model):
     item = models.ForeignKey(Project, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.title
+        return self.item
 
 
 class Order(models.Model):
@@ -36,7 +40,6 @@ class Order(models.Model):
 
     def __str__(self):
         return self.user.username
-
  
 
 

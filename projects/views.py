@@ -16,6 +16,9 @@ class ItemDetailView(DetailView):
     model = Project
     template_name = "product.html"
 
+def bookings(request):
+    return render(request, "bookings.html")
+
 """
 def detail(request):
     broject = Project.objects.get(pk=postid)
