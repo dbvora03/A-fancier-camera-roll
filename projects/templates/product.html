@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
+  <title>{{ object.title }}</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -54,6 +54,7 @@
         <!-- Left -->
 
         <!-- Right -->
+        <!--
         <ul style="margin-left: 60vw"class="navbar-nav nav-flex-icons">
           <li class="nav-item">
             <a class="nav-link waves-effect">
@@ -64,19 +65,17 @@
           </li>
           
         </ul>
-
+      -->
       </div>
 
     </div>
   </nav>
   <!-- Navbar -->
-
-
   <!--Main layout-->
   <main class="pt-4">
     <div class="row">
         <div class="container">
-        <p class="display-4" style="margin-top: 35px;">{{ object.title }}</p>
+        <p class="display-4" style="margin-top: 35px;"><small>{{ object.title }}</small></p>
             <div class="container">
                 <div class="row">    
                     <img  class="img-fluid" style="height: 69vh; width: auto; margin-left: auto; margin-right: auto; " src="/{{ project.image }}" alt="{{project.title}}" style=" width: 15vv ; height: auto;">
@@ -90,7 +89,8 @@
 
         <!--Grid column-->
         <div class="col-md-6 text-center">
-          <h4 class="my-4 h4"> {{ object.location }}</h4>
+          <p class="my-4 text-center"> {{ object.location }}</h4>
+          <h5><b>CAD${{object.price}}</b></h5>
         </div>
         <!--Grid column-->
 
@@ -101,9 +101,16 @@
       <div class="container">
 
         <div class="row">
-            <div class="justify-content-center">
+          <div class="justify-content-center"style="margin-left: auto; margin-right: auto; margin-bottom: 10px ;">
+            <div class="container">
+                <h6>Email <a href="mailto: dbvora03@gmail.com">dbvora03@gmail.com</a> to make purchases</h6>
+            </div>
+          </div>
+<!--
+        <div class="row">
+            <div class="justify-content-center"style="margin-left: auto; margin-right: auto;">
               <div class="container">
-                  <section class="light">
+                  <section class="light" >
                       <h6>{{ object.location}} Print </h6>
                       <h6><strong>${{ object.price }}</strong></h6>
                       <div class="md-form">
@@ -112,6 +119,10 @@
                   </section>
               </div>
             </div>
+
+
+          -->
+
             <!--
             <div class="col-md-3">
                 <div class="container">
@@ -146,19 +157,20 @@
                     </section>
                 </div>
             </div>
-          -->
+          
         </div>
+      -->
     </div>
 
       <!--Grid row-->
-
+        <!-- buttons 
         <div class="row justify-content-center"style="margin-bottom: 35px; margin-top: 35px;">
           <button type="button" id="checkout" class="btn btn-outline-dark" style="width: 25vw;">Add to Cart</button>
         </div>
         <div class="row justify-content-center"style="margin-bottom: 35px; margin-top: 35px;">
           <button type="button" id="checkout" class="btn btn-outline-dark" style="width: 25vw;">View Cart</button>
         </div>
-        
+      -->
 
     </div>
   </main>

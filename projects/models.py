@@ -8,8 +8,9 @@ from django.shortcuts import reverse
 class Project(models.Model):
     title = models.CharField(max_length=100)
     image = models.CharField(max_length=100)
-    location = models.CharField(max_length=100)
-    price = models.FloatField(max_length=4)
+    location = models.CharField(max_length=500)
+    price = models.CharField(max_length=50)
+
 
     #This line below seems to cause all the problems, regardless of what the foreignkey error is
     #pricetwo = models.FloatField(max_length=4)
